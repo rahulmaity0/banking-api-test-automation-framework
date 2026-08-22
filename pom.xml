@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.4.2</version>
+        <relativePath/>
+    </parent>
+    <groupId>com.rahul.sdet</groupId>
+    <artifactId>banking-api-automation</artifactId>
+    <version>1.0.0</version>
+    <name>Banking API Test Automation</name>
+    <description>Portfolio-quality API under test and its SDET automation framework</description>
+    <properties>
+        <java.version>17</java.version>
+        <rest-assured.version>5.5.0</rest-assured.version>
+        <allure.version>2.29.1</allure.version>
+    </properties>
+    <dependencies>
+        <dependency><groupId>org.springframework.boot</groupId><artifactId>spring-boot-starter-web</artifactId></dependency>
+        <dependency><groupId>org.springframework.boot</groupId><artifactId>spring-boot-starter-validation</artifactId></dependency>
+        <dependency><groupId>org.springframework.boot</groupId><artifactId>spring-boot-starter-test</artifactId><scope>test</scope></dependency>
+        <dependency><groupId>io.rest-assured</groupId><artifactId>rest-assured</artifactId><version>${rest-assured.version}</version><scope>test</scope></dependency>
+        <dependency><groupId>io.rest-assured</groupId><artifactId>json-schema-validator</artifactId><version>${rest-assured.version}</version><scope>test</scope></dependency>
+        <dependency><groupId>io.qameta.allure</groupId><artifactId>allure-junit5</artifactId><version>${allure.version}</version><scope>test</scope></dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin><groupId>org.springframework.boot</groupId><artifactId>spring-boot-maven-plugin</artifactId></plugin>
+            <plugin><groupId>io.qameta.allure</groupId><artifactId>allure-maven</artifactId><version>2.14.0</version></plugin>
+        </plugins>
+    </build>
+</project>

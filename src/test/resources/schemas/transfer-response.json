@@ -1,0 +1,1 @@
+{"type":"object","required":["transactionId","status","fromAccount","toAccount","amount"],"properties":{"transactionId":{"type":"string"},"status":{"const":"COMPLETED"},"fromAccount":{"type":"string"},"toAccount":{"type":"string"},"amount":{"type":"number"}}}
